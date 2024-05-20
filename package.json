@@ -1,0 +1,14 @@
+{
+	"name": "static-type-checking-sandbox",
+	"version": "1.0.0",
+	"description": "> This is meant to be a handy reference for getting set up with using `// @ts-check` in your javascript projects",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {}
+}
