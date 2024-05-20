@@ -1,4 +1,3 @@
-// @ts-check
 const myPets = [
 	{ name: 'Pebbles', loves: 'bread' },
 	{ name: 'Nacho', loves: 'anchovies' },

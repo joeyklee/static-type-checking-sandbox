@@ -1,6 +1,3 @@
-// @ts-check
-//  ^^^ now we are telling vscode -- please staticly check my types
-
 const myPets = [
 	{ name: 'Pebbles', loves: 'bread' },
 	{ name: 'Nacho', loves: 'anchovies' },
