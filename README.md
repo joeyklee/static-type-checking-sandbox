@@ -137,3 +137,33 @@ async function getMyData() {
 	return data.map((d) => `${d.name} loves ${d.loves}`);
 }
 ```
+
+### Adding a type assertion on .reduce() accumulator
+
+```js
+/**
+ * @type {{name:string; mainHobby:string}[]}
+ */
+const myData = [
+	{ name: 'Pebbles', mainHobby: 'sleeping' },
+	{ name: 'Nacho', mainHobby: 'sleeping' },
+	{ name: 'Peppercorn', mainHobby: 'playing' }
+];
+
+/**
+ * Creating a lookup table using .reduce()
+ *
+ * {
+ *  "sleeping":["Pebbles", "Nacho"],
+ *  "playing": ["Peppercorn"]
+ * }
+ */
+const lookup = myData.reduce((acc, curr) => {
+	if (!acc[curr.mainHobby]) {
+		acc[curr.mainHobby] = [];
+	}
+	acc[curr.mainHobby].push(curr.name);
+
+	return acc;
+}, /** @type {Record<string, string[]>} */ ({}));
+```
